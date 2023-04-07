@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header/Header";
+import Counter from "./components/Counter/Counter";
+import { useState } from "react";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+  const inputHandler = (event) => {
+    console.log(event.target.value);
+    setInputValue(event.target.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Counter />
+      <div className="inputDiv">
+        <input onChange={(e) => inputHandler(e)} value={inputValue}></input>
+      </div>
     </div>
   );
 }
