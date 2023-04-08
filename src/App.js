@@ -1,16 +1,16 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Counter from "./components/Counter/Counter";
-import Input from "./components/Input/Input";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Counter />
-      <Input />
-    </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;

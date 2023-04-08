@@ -1,7 +1,7 @@
 import "./Input.css";
 import { useState } from "react";
 
-function Input() {
+const Input = () => {
   const [inputValue, setInputValue] = useState("");
   const inputHandler = (event) => {
     console.log(event.target.value);
@@ -12,6 +12,6 @@ function Input() {
       <input onChange={(e) => inputHandler(e)} value={inputValue}></input>
     </div>
   );
-}
+};
 
 export default Input;

@@ -1,16 +1,17 @@
 .counter {
-  margin-top: 50px;
+  margin-top: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 63vh;
 }
-p {
+.counter p {
   background-color: plum;
   padding: 20px;
   border-radius: 12px;
 }
-button {
+.counter button {
   border: none;
   background-color: blueviolet;
   color: white;

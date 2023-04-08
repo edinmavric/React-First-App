@@ -2,6 +2,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(212, 208, 212);
+  padding: 6px;
 }
 header ul {
   list-style: none;
