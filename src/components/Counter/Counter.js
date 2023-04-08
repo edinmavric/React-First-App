@@ -13,8 +13,8 @@ function Counter() {
     <div className="counter">
       <p>{number}</p>
       <div className="buttons">
-        <button onClick={add}>Add</button>
-        <button onClick={sub}>Sub</button>
+        <button onClick={sub}>-</button>
+        <button onClick={add}>+</button>
       </div>
     </div>
   );
