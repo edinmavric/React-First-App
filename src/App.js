@@ -9,7 +9,10 @@ const App = () => {
     <>
       <Header />
       <Counter />
-      <Input />
+      <form>
+        <label>Log In</label>
+        <Input />
+      </form>
       <Footer />
     </>
   );

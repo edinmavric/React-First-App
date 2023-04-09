@@ -9,18 +9,12 @@ const Input = () => {
   };
   return (
     <>
-      <form>
-        <label>Log In</label>
-        <div>
-          <input placeholder="Username" type="text"></input>
-          <input
-            onChange={(event) => inputHandler(event)}
-            value={inputValue}
-            placeholder="Password"
-            type="password"
-          ></input>
-        </div>
-      </form>
+      <input
+        onChange={(event) => inputHandler(event)}
+        value={inputValue}
+        placeholder="Some text"
+        type="text"
+      ></input>
     </>
   );
 };
