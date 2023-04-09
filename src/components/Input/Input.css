@@ -1,6 +1,14 @@
-.inputDiv {
+form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  flex-direction: column;
+  margin-bottom: 61px;
+}
+input {
+  margin: 0 12px;
+  border-color: #c0a6de;
+}
+label {
+  margin-bottom: 22px;
 }

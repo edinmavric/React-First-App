@@ -8,9 +8,20 @@ const Input = () => {
     setInputValue(event.target.value);
   };
   return (
-    <div className="inputDiv">
-      <input onChange={(e) => inputHandler(e)} value={inputValue}></input>
-    </div>
+    <>
+      <form>
+        <label>Log In</label>
+        <div>
+          <input placeholder="Username" type="text"></input>
+          <input
+            onChange={(event) => inputHandler(event)}
+            value={inputValue}
+            placeholder="Password"
+            type="password"
+          ></input>
+        </div>
+      </form>
+    </>
   );
 };
 
