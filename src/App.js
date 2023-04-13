@@ -7,16 +7,20 @@ import Card from "./components/card/card";
 
 const App = () => {
   return (
-    <>
+    <div>
       <Header />
       <Counter />
-      <Card />
+      <div className="card-container">
+        <Card />
+        <Card />
+        <Card />
+      </div>
       <form>
         <label>Log In</label>
         <Input />
       </form>
       <Footer />
-    </>
+    </div>
   );
 };
 

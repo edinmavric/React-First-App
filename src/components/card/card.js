@@ -11,8 +11,9 @@ const Card = () => {
         <span>19km from center</span>
       </div>
       <div className="hotel-info">
-        <p>Hotel Hotel</p>
-        <p>$702</p>
+        <p>Hotel Hotel -</p>
+        <p> - </p>
+        <p>- $702</p>
       </div>
     </div>
   );

@@ -3,15 +3,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 300px;
+  height: auto;
+  background-color: #dedec8;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 12px;
 }
 .card img {
   width: 260px;
   height: 200px;
   border-radius: 28px;
+  margin: 0 0 14px 0;
 }
 .card .hotel-info {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 200px;
 }
