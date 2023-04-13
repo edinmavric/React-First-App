@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60vh;
+  margin-top: 42px;
 }
 .counter p {
   background-color: #debdbd;
