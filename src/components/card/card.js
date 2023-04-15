@@ -1,19 +1,19 @@
-import "./card.css";
-import image from "../../images/image.jpeg";
+import './card.css';
+import image from '../../images/image.jpeg';
 
-const Card = () => {
+const Card = props => {
   return (
     <div className="card">
       <img alt="" src={image} />
       <div>
-        <span>4.8(227 review's)</span>
+        <span>{props.rating}</span>
         <span> - </span>
-        <span>19km from center</span>
+        <span>{props.distance}</span>
       </div>
       <div className="hotel-info">
-        <p>Hotel Hotel -</p>
+        <p>{props.title} -</p>
         <p> - </p>
-        <p>- $702</p>
+        <p>- ${props.price}</p>
       </div>
     </div>
   );

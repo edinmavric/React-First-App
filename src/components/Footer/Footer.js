@@ -1,9 +1,9 @@
-import "./Footer.css";
+import './Footer.css';
 
-const Footer = () => {
+const Footer = props => {
   return (
     <footer>
-      <p>Thanks for using our Counter!</p>
+      <p>{props.paragraph}</p>
     </footer>
   );
 };

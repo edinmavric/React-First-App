@@ -1,10 +1,10 @@
-import "./Header.css";
+import './Header.css';
 
-const Header = () => {
+const Header = props => {
   return (
     <>
       <header>
-        <h1>Edin</h1>
+        <h1>{props.title}</h1>
         <ul>
           <li>
             <a
@@ -12,7 +12,7 @@ const Header = () => {
               rel="noreferrer"
               target="_blank"
             >
-              About
+              {props.li1}
             </a>
           </li>
           <li>
@@ -21,7 +21,7 @@ const Header = () => {
               rel="noreferrer"
               target="_blank"
             >
-              Counter
+              {props.li2}
             </a>
           </li>
         </ul>

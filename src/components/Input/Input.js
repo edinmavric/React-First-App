@@ -1,18 +1,18 @@
-import "./Input.css";
-import { useState } from "react";
+import './Input.css';
+import { useState } from 'react';
 
-const Input = () => {
-  const [inputValue, setInputValue] = useState("");
-  const inputHandler = (event) => {
+const Input = props => {
+  const [inputValue, setInputValue] = useState('');
+  const inputHandler = event => {
     console.log(event.target.value);
     setInputValue(event.target.value);
   };
   return (
     <>
       <input
-        onChange={(event) => inputHandler(event)}
+        onChange={event => inputHandler(event)}
         value={inputValue}
-        placeholder="Some text"
+        placeholder={props.placeholder}
         type="text"
       ></input>
     </>

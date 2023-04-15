@@ -1,7 +1,7 @@
-import "./Counter.css";
-import { useState } from "react";
+import './Counter.css';
+import { useState } from 'react';
 
-const Counter = () => {
+const Counter = props => {
   const [number, setNumber] = useState(0);
   const add = () => {
     setNumber(number + 1);
@@ -13,8 +13,8 @@ const Counter = () => {
     <div className="counter">
       <p>{number}</p>
       <div className="buttons">
-        <button onClick={sub}>-</button>
-        <button onClick={add}>+</button>
+        <button onClick={sub}>{props.sub}</button>
+        <button onClick={add}>{props.add}</button>
       </div>
     </div>
   );
