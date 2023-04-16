@@ -1,10 +1,10 @@
 import './Header.css';
 
-const Header = props => {
+const Header = ({ title, li1, li2 }) => {
   return (
     <>
       <header>
-        <h1>{props.title}</h1>
+        <h1>{title}</h1>
         <ul>
           <li>
             <a
@@ -12,7 +12,7 @@ const Header = props => {
               rel="noreferrer"
               target="_blank"
             >
-              {props.li1}
+              {li1}
             </a>
           </li>
           <li>
@@ -21,7 +21,7 @@ const Header = props => {
               rel="noreferrer"
               target="_blank"
             >
-              {props.li2}
+              {li2}
             </a>
           </li>
         </ul>

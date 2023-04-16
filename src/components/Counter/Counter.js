@@ -1,20 +1,20 @@
 import './Counter.css';
 import { useState } from 'react';
 
-const Counter = props => {
+const Counter = ({ sub, add }) => {
   const [number, setNumber] = useState(0);
-  const add = () => {
+  const increment = () => {
     setNumber(number + 1);
   };
-  const sub = () => {
+  const decrement = () => {
     setNumber(number - 1);
   };
   return (
     <div className="counter">
       <p>{number}</p>
       <div className="buttons">
-        <button onClick={sub}>{props.sub}</button>
-        <button onClick={add}>{props.add}</button>
+        <button onClick={decrement}>{sub}</button>
+        <button onClick={increment}>{add}</button>
       </div>
     </div>
   );

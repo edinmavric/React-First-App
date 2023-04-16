@@ -1,7 +1,7 @@
 import './Input.css';
 import { useState } from 'react';
 
-const Input = props => {
+const Input = ({ placeholder }) => {
   const [inputValue, setInputValue] = useState('');
   const inputHandler = event => {
     console.log(event.target.value);
@@ -12,7 +12,7 @@ const Input = props => {
       <input
         onChange={event => inputHandler(event)}
         value={inputValue}
-        placeholder={props.placeholder}
+        placeholder={placeholder}
         type="text"
       ></input>
     </>

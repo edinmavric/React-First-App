@@ -1,19 +1,19 @@
 import './card.css';
 import image from '../../images/image.jpeg';
 
-const Card = props => {
+const Card = ({ rating, distance, title, price }) => {
   return (
     <div className="card">
       <img alt="" src={image} />
       <div>
-        <span>{props.rating}</span>
+        <span>{rating}</span>
         <span> - </span>
-        <span>{props.distance}</span>
+        <span>{distance}</span>
       </div>
       <div className="hotel-info">
-        <p>{props.title} -</p>
+        <p>{title} -</p>
         <p> - </p>
-        <p>- ${props.price}</p>
+        <p>- ${price}</p>
       </div>
     </div>
   );

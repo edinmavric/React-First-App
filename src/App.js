@@ -32,7 +32,7 @@ const App = () => {
       </div>
       <form>
         <label>Log In</label>
-        <Input placeholder="Some text" />
+        <Input placeholder="eg. John Doe" />
       </form>
       <Footer paragraph="Thanks for using our Counter!" />
     </>

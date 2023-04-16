@@ -1,9 +1,9 @@
 import './Footer.css';
 
-const Footer = props => {
+const Footer = ({ paragraph }) => {
   return (
     <footer>
-      <p>{props.paragraph}</p>
+      <p>{paragraph}</p>
     </footer>
   );
 };
