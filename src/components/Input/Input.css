@@ -1,14 +1,11 @@
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 61px;
+.bottom-margin {
+  margin-bottom: 30px;
+}
+.labeled-text:nth-child(1) {
+  padding-top: 20px;
 }
 input {
-  margin: 0 12px;
-  border-color: #c0a6de;
-}
-label {
-  margin: 22px 0;
+  margin: 2px;
+  padding: 6px 8px;
+  border-radius: 4px;
 }

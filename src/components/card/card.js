@@ -1,9 +1,9 @@
 import './card.css';
 import image from '../../images/image.jpeg';
 
-const Card = ({ rating, distance, title, price }) => {
+const Card = ({ rating, distance, title, price, color }) => {
   return (
-    <div className="card">
+    <div className="card" style={{ backgroundColor: color }}>
       <img alt="" src={image} />
       <div>
         <span>{rating}</span>

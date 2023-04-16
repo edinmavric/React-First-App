@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(222, 222, 222);
+  padding: 40px 46px;
+  margin: 24px 0 36px 0;
+  border-radius: 12px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
