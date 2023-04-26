@@ -4,3 +4,25 @@
   justify-content: center;
   align-items: center;
 }
+.cards-show-hide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-hide-btn {
+  background-color: #dedec8;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 1px 1px 1px #888888;
+  margin: 20px 0 30px 0;
+}
+.show-hide-btn:hover {
+  background-color: #debdbd;
+}

@@ -1,12 +1,12 @@
 import './Input.css';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 const Input = ({ text, type, placeholder, classes }) => {
-  // const [inputValue, setInputValue] = useState('');
-  // const inputHandler = event => {
-  //   console.log(event.target.value);
-  //   setInputValue(event.target.value);
-  // };
+  const [inputValue, setInputValue] = useState('');
+  const inputHandler = event => {
+    console.log(event.target.value);
+    setInputValue(event.target.value);
+  };
   return (
     <>
       <div className="labeled-text">
@@ -14,8 +14,8 @@ const Input = ({ text, type, placeholder, classes }) => {
       </div>
       <input
         className={classes}
-        // onChange={event => inputHandler(event)}
-        // value={inputValue}
+        onChange={event => inputHandler(event)}
+        value={inputValue}
         placeholder={placeholder}
         type={type}
       ></input>
