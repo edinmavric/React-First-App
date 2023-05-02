@@ -13,3 +13,28 @@ form {
   justify-content: center;
   align-items: center;
 }
+.registration-form-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration-form-button-container button {
+  margin: 0 16px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 0 #888888;
+  cursor: pointer;
+}
+.cancel-btn {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.reg-btn {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.cancel-btn:hover {
+  background-color: red;
+}
+.reg-btn:hover {
+  background-color: green;
+}

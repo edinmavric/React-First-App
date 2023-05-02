@@ -1,5 +1,6 @@
 import './registrationForm.css';
 import Input from '../Input/Input';
+import Button from '../button/button';
 
 const Form = () => {
   return (
@@ -21,6 +22,10 @@ const Form = () => {
             placeholder="Re-enter your password"
             classes="bottom-margin"
           />
+        </div>
+        <div className="registration-form-button-container">
+          <Button text="Cancel" classN="cancel-btn" />
+          <Button text="Register" classN="reg-btn" />
         </div>
       </form>
     </div>
