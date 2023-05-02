@@ -2,8 +2,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import Counter from './components/Counter/Counter';
 import Footer from './components/Footer/Footer';
-import Card from './components/card/card';
-import Form from './components/registrationForm/registrationForm';
+import Card from './components/Card/Card';
+import Form from './components/RegistrationForm/RegistrationForm';
 import { useState } from 'react';
 
 const cardData = [
@@ -59,13 +59,13 @@ const cardData = [
 
 const App = () => {
   const [show, setShow] = useState(false);
-  const toggle = () => {
+  const toggleShowButtonHandler = () => {
     setShow(prevState => !prevState);
   };
   return (
     <>
       <Header title="Edin" li1="About" li2="Counter" />
-      <Counter sub="-" add="+" />
+      <Counter sub="-" add="+" reset="Reset" />
       <div className="card-container">
         {cardData.map(card => {
           if (card.id >= 4) {
@@ -101,7 +101,7 @@ const App = () => {
           })}
       </div>
       <div className="button-container">
-        <button className="show-hide-btn" onClick={toggle}>
+        <button className="show-hide-btn" onClick={toggleShowButtonHandler}>
           {show ? 'Hide' : 'Show'}
         </button>
       </div>

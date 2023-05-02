@@ -1,9 +1,7 @@
-import './card.css';
+import './Card.css';
 import image from '../../images/image.jpeg';
-import { useState } from 'react';
 
 const Card = ({ rating, distance, title, price, color }) => {
-  const [first, setfirst] = useState(false);
   return (
     <div className="card" style={{ backgroundColor: color }}>
       <img alt="" src={image} />

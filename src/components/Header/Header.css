@@ -4,6 +4,7 @@ header {
   align-items: center;
   background-color: #deb1dd;
   padding: 6px;
+  box-shadow: 0 0 9px 3px #888888;
 }
 header ul {
   list-style: none;

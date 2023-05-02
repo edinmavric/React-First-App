@@ -1,6 +1,6 @@
-import './registrationForm.css';
+import './RegistrationForm.css';
 import Input from '../Input/Input';
-import Button from '../button/button';
+import Button from '../Button/Button';
 
 const Form = () => {
   return (

@@ -1,20 +1,30 @@
 import './Counter.css';
 import { useState } from 'react';
 
-const Counter = ({ sub, add }) => {
-  const [number, setNumber] = useState(0);
-  const increment = () => {
-    setNumber(number + 1);
+const Counter = ({ sub, add, reset }) => {
+  const [counter, setCounter] = useState(0);
+
+  const incrementCounterHandler = () => {
+    setCounter(counter + 1);
   };
-  const decrement = () => {
-    setNumber(number - 1);
+  const decrementCounterHandler = () => {
+    setCounter(counter - 1);
   };
+  const restartCounterHandler = () => {
+    setCounter(0);
+  };
+
   return (
     <div className="counter">
-      <p>{number}</p>
+      <p>{counter}</p>
       <div className="buttons">
-        <button onClick={decrement}>{sub}</button>
-        <button onClick={increment}>{add}</button>
+        <div className="buttons__add-sub">
+          <button onClick={decrementCounterHandler}>{sub}</button>
+          <button onClick={incrementCounterHandler}>{add}</button>
+        </div>
+        <div className="buttons__reset">
+          <button onClick={restartCounterHandler}>{reset}</button>
+        </div>
       </div>
     </div>
   );
