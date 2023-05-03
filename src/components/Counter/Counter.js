@@ -1,22 +1,39 @@
 import './Counter.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Counter = ({ sub, add, reset }) => {
   const [counter, setCounter] = useState(0);
+  const [counterColor, setCounterColor] = useState('neutral');
 
+  const colorChangerHandler = () => {
+    if (counter > 0) {
+      setCounterColor('positive');
+    } else if (counter < 0) {
+      setCounterColor('negative');
+    } else {
+      setCounterColor('neutral');
+    }
+  };
   const incrementCounterHandler = () => {
-    setCounter(counter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    // colorChangerHandler();
   };
   const decrementCounterHandler = () => {
-    setCounter(counter - 1);
+    setCounter(prevCounter => prevCounter - 1);
+    // colorChangerHandler();
   };
   const restartCounterHandler = () => {
     setCounter(0);
+    // colorChangerHandler();
   };
+
+  useEffect(() => {
+    colorChangerHandler();
+  }, [counter]);
 
   return (
     <div className="counter">
-      <p>{counter}</p>
+      <p className={counterColor}>{counter}</p>
       <div className="buttons">
         <div className="buttons__add-sub">
           <button onClick={decrementCounterHandler}>{sub}</button>
