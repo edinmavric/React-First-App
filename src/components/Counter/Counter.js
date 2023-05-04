@@ -6,12 +6,12 @@ const Counter = ({ sub, add, reset }) => {
   const [counterColor, setCounterColor] = useState('neutral');
 
   const colorChangerHandler = () => {
-    if (counter > 0) {
-      setCounterColor('positive');
+    if (counter === 0) {
+      setCounterColor('neutral');
     } else if (counter < 0) {
       setCounterColor('negative');
     } else {
-      setCounterColor('neutral');
+      setCounterColor('positive');
     }
   };
   const incrementCounterHandler = () => {
@@ -30,6 +30,9 @@ const Counter = ({ sub, add, reset }) => {
   useEffect(() => {
     colorChangerHandler();
   }, [counter]);
+  useEffect(() => {
+    document.title = `You clicked ${counter} times!`;
+  });
 
   return (
     <div className="counter">
