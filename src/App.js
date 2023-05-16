@@ -6,6 +6,7 @@ import Card from './components/Card/Card';
 import Form from './components/RegistrationForm/RegistrationForm';
 import { useState } from 'react';
 import InputValue from './components/Input/InputValue';
+import Dropdown from './components/Dropdown/Dropdown';
 
 const cardData = [
   {
@@ -67,6 +68,7 @@ const App = () => {
     <>
       <Header title="Edin" li1="About" li2="Counter" />
       <Counter sub="-" add="+" reset="Reset" />
+      <Dropdown />
       <InputValue />
       <div className="card-container">
         {cardData.map(card => {
