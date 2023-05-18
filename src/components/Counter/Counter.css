@@ -4,6 +4,8 @@
   align-items: center;
   flex-direction: column;
   margin-top: 42px;
+  background-color: rgba(127, 255, 212, 0.3);
+  padding: 12px 0;
 }
 .counter p {
   background-color: #debdbd;

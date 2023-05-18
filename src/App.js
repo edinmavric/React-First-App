@@ -7,6 +7,7 @@ import Form from './components/RegistrationForm/RegistrationForm';
 import { useState } from 'react';
 import InputValue from './components/Input/InputValue';
 import Dropdown from './components/Dropdown/Dropdown';
+import Login from './components/Login-Logout/Login';
 
 const cardData = [
   {
@@ -67,6 +68,7 @@ const App = () => {
   return (
     <>
       <Header title="Edin" li1="About" li2="Counter" />
+      <Login />
       <Counter sub="-" add="+" reset="Reset" />
       <Dropdown />
       <InputValue />

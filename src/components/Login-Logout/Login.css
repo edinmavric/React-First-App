@@ -1,0 +1,15 @@
+.Login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Login-page button {
+    padding: 6px 12px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 10px 1px #ddd;
+    background-color: rgba(127, 255, 212, 0.18);
+}
