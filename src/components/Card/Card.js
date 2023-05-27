@@ -20,7 +20,13 @@ const Card = () => {
   return (
     <div className="card-container">
       {data.map(product => (
-        <div key={product.id} className="card">
+        <a
+          key={product.id}
+          href="https://fakestoreapi.com/products"
+          target="_blank"
+          rel="noreferrer"
+          className="card"
+        >
           <img alt="" src={product.image} />
           <div className="hotel-info">
             <p>{product.title} </p>
@@ -29,7 +35,7 @@ const Card = () => {
               $<span>{product.price}</span>
             </p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );

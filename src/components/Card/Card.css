@@ -17,7 +17,13 @@
   border-radius: 20px;
   padding: 20px;
   margin: 12px;
+  text-decoration: none;
   box-shadow: 2px 2px 5px 1px #888888;
+  transition: 0.3s ease-in-out;
+}
+.card:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.075);
 }
 .card:nth-child(even) {
   background-color: #dedec8;
