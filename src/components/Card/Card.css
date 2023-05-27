@@ -1,23 +1,50 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
+  min-height: 400px;
+  max-height: 400px;
   height: auto;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 20px;
-  margin: 12px 12px 10px 12px;
+  margin: 12px;
   box-shadow: 2px 2px 5px 1px #888888;
 }
+.card:nth-child(even) {
+  background-color: #dedec8;
+}
+.card:nth-child(odd) {
+  background-color: #debdbd;
+}
 .card img {
-  width: 260px;
-  height: 200px;
-  border-radius: 28px;
+  max-width: 260px;
+  max-height: 200px;
+  min-width: 260px;
+  min-height: 200px;
+  border-radius: 10px;
   margin: 0 0 14px 0;
 }
 .card .hotel-info {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: left;
+  color: #121212;
+}
+.hotel-info p {
+  font-size: 20px;
+  font-weight: 450;
+}
+.hotel-info span {
+  font-size: 26px;
+  font-weight: 800;
 }

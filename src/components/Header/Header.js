@@ -7,20 +7,12 @@ const Header = ({ title, li1, li2 }) => {
         <h1>{title}</h1>
         <ul>
           <li>
-            <a
-              href="https://edinmavric.github.io/Portfolio/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href="https://edinmavric.com" rel="noreferrer" target="_blank">
               {li1}
             </a>
           </li>
           <li>
-            <a
-              href="https://edinmavric.github.io/Portfolio/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href="https://edinmavric.com" rel="noreferrer" target="_blank">
               {li2}
             </a>
           </li>

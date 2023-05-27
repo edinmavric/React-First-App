@@ -1,20 +1,36 @@
 import './Card.css';
-import image from '../../images/image.jpeg';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const Card = ({ rating, distance, title, price, color }) => {
+const Card = () => {
+  const [data, setData] = useState([]);
+
+  const fetchApi = async () => {
+    try {
+      const response = await axios.get('https://fakestoreapi.com/products');
+      setData(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
   return (
-    <div className="card" style={{ backgroundColor: color }}>
-      <img alt="" src={image} />
-      <div>
-        <span>{rating}</span>
-        <span> - </span>
-        <span>{distance}</span>
-      </div>
-      <div className="hotel-info">
-        <p>{title} -</p>
-        <p> - </p>
-        <p>- ${price}</p>
-      </div>
+    <div className="card-container">
+      {data.map(product => (
+        <div key={product.id} className="card">
+          <img alt="" src={product.image} />
+          <div className="hotel-info">
+            <p>{product.title} </p>
+            <p>
+              {' '}
+              $<span>{product.price}</span>
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
