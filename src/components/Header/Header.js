@@ -1,20 +1,26 @@
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
-const Header = ({ title, li1, li2 }) => {
+const Header = () => {
   return (
     <>
       <header>
-        <h1>{title}</h1>
+        <h1>Edin</h1>
         <ul>
           <li>
-            <a href="https://edinmavric.com" rel="noreferrer" target="_blank">
-              {li1}
-            </a>
+            <NavLink to="/">Svi Produkti</NavLink>
           </li>
           <li>
-            <a href="https://edinmavric.com" rel="noreferrer" target="_blank">
-              {li2}
-            </a>
+            <NavLink to="/mensclothing">Muska Odeca</NavLink>
+          </li>
+          <li>
+            <NavLink to="/womensclothing">Zenska Odeca</NavLink>
+          </li>
+          <li>
+            <NavLink to="/jewelery">Nakit</NavLink>
+          </li>
+          <li>
+            <NavLink to="/electronics">Elektronika</NavLink>
           </li>
         </ul>
       </header>
