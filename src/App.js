@@ -4,33 +4,36 @@ import ResponsiveAppBar from './components/Header/Header';
 import LabelBottomNavigation from './components/Footer/Footer';
 import Card from './components/Card/Card';
 import SearchBar from './components/Card/SearchBar';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useState } from 'react';
+import { useQuery } from 'react-query';
+
+const fetchApi = async () => {
+  const response = await axios.get('https://fakestoreapi.com/products');
+  const data = response.data;
+  return data;
+};
 
 const App = () => {
-  const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
+  const { data, isLoading, isError, error } = useQuery('products', fetchApi);
 
   const handleSearch = query => {
     setSearch(query);
   };
 
-  const fetchApi = async () => {
-    try {
-      const response = await axios.get('https://fakestoreapi.com/products');
-      setData(response.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const filteredData = data
+    ? data.filter(product =>
+        product.title.toLowerCase().includes(search.toLowerCase())
+      )
+    : [];
 
-  useEffect(() => {
-    fetchApi();
-  }, []);
-
-  const filteredData = data.filter(product =>
-    product.title.toLowerCase().includes(search.toLowerCase())
-  );
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  if (isError) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <>
