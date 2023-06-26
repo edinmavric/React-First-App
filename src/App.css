@@ -23,10 +23,3 @@
 .show-hide-btn:hover {
   background-color: #debdbd;
 }
-.Main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-}

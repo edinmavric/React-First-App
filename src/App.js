@@ -1,32 +1,30 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import ResponsiveAppBar from './components/Header/Header';
-import LabelBottomNavigation from './components/Footer/Footer';
-import Card from './components/Card/Card';
-import SearchBar from './components/Card/SearchBar';
-import axios from 'axios';
 import { useState } from 'react';
+import axios from 'axios';
 import { useQuery } from 'react-query';
-
-const fetchApi = async () => {
-  const response = await axios.get('https://fakestoreapi.com/products');
-  const data = response.data;
-  return data;
-};
+import {
+  BetweenWrapper,
+  MiddleWrapper,
+  MiniWrapper,
+  Wrapper,
+} from './App.styled';
 
 const App = () => {
-  const [search, setSearch] = useState('');
-  const { data, isLoading, isError, error } = useQuery('products', fetchApi);
+  const [search, setSearch] = useState('London');
 
-  const handleSearch = query => {
-    setSearch(query);
+  const fetchApi = async () => {
+    const response = await axios.get(
+      `http://api.weatherapi.com/v1/current.json?key=1a4ad13f4daf43099cf134230232506&q=${search}`
+    );
+    const data = response.data;
+    return data;
   };
 
-  const filteredData = data
-    ? data.filter(product =>
-        product.title.toLowerCase().includes(search.toLowerCase())
-      )
-    : [];
+  const { data, isLoading, isError, error } = useQuery('weather', fetchApi);
+
+  const handleSearch = () => {
+    fetchApi();
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -35,17 +33,36 @@ const App = () => {
     return <div>Error: {error.message}</div>;
   }
 
+  const filteredData =
+    data &&
+    data.location &&
+    data.location.name.toLowerCase().includes(search.toLowerCase())
+      ? data
+      : null;
+
   return (
-    <>
-      <ResponsiveAppBar />
-      <SearchBar onSearch={handleSearch} />
-      <div className="Main">
-        <Routes>
-          <Route path="/" element={<Card data={filteredData} />} />
-        </Routes>
-      </div>
-      <LabelBottomNavigation />
-    </>
+    <Wrapper>
+      <MiddleWrapper>
+        <input
+          type="text"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search City</button>
+      </MiddleWrapper>
+      {filteredData && (
+        <MiddleWrapper>
+          <BetweenWrapper>
+            <h1>{filteredData.location.name}</h1>
+            <span>{filteredData.location.localtime}</span>
+          </BetweenWrapper>
+          <MiniWrapper>
+            <p>{filteredData.current.temp_c}*</p>
+            <img src={`${filteredData.current.condition.icon}`} />
+          </MiniWrapper>
+        </MiddleWrapper>
+      )}
+    </Wrapper>
   );
 };
 
