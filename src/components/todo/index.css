@@ -2,3 +2,13 @@
   text-decoration: line-through;
   color: green;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 8px;
+}
+li button {
+  margin: 0 0 0 8px;
+}
