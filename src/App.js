@@ -1,10 +1,10 @@
 import './App.css';
-import TodoList from './components/todo';
+import Quiz from './components/Quiz/quiz';
 
 const App = () => {
   return (
     <>
-      <TodoList />
+      <Quiz />
     </>
   );
 };
