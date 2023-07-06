@@ -1,10 +1,12 @@
 import './App.css';
-import Quiz from './components/Quiz/quiz';
+import Carousel from './components/Carousel/Carousel';
+// import Quiz from './components/Quiz/quiz';
 
 const App = () => {
   return (
     <>
-      <Quiz />
+      {/* <Quiz /> */}
+      <Carousel />
     </>
   );
 };

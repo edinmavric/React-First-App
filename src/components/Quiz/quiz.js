@@ -189,6 +189,15 @@ const Quiz = () => {
                 key={index}
                 onClick={() => handleAnswerClick(ans.isCorrect)}
               >
+                {index === 0
+                  ? 'a) '
+                  : index === 1
+                  ? 'b) '
+                  : index === 2
+                  ? 'c) '
+                  : index === 3
+                  ? 'd) '
+                  : null}
                 {ans.answerText}
               </button>
             ))}

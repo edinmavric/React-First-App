@@ -1,0 +1,17 @@
+.Carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Carousel button {
+  border-radius: 50%;
+  border: 1px dashed #888;
+  font-size: 30px;
+  padding: 12px 24px;
+  display: flex;
+}
+.Carousel img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}

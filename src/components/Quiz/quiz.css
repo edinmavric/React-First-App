@@ -23,7 +23,7 @@
 .Quiz-Question span {
   font-size: 40px;
   position: absolute;
-  top: 17%;
+  top: 15%;
   left: 25%;
   right: 25%;
 }
@@ -39,11 +39,13 @@
   border: none;
   border-radius: 0.35rem;
   cursor: pointer;
-  width: 400px;
-  height: 70px;
+  width: 420px;
+  height: 80px;
   background-color: beige;
   color: black;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 .green:active {
   background-color: green;
